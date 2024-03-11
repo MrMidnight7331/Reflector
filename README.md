@@ -1,7 +1,7 @@
 # Reflector
 A quick reverse shell generator made for capture the flags
 
-![Example](Assets/Example.png)
+![Example](Assets/Example new.png)
 
 ### Disclaimer:
 This tool is only for educational and academic purposes and should only be used with strict consent. Do not use it for illegal purposes! Developers assume no liability and are not responsible for any misuse or damage caused by this tool and software.
@@ -13,11 +13,10 @@ chmod +x Reflector.sh
 ```
 ### Usage:
 ```bash
-./Reflector.sh [-l|--lhost <lhost>] [-p|--lport <lport>] [-s|--shell <shell>] [-pl|--payload <1-12>] [-sp|--spawn] [-c|--copy] [--help]
+./Reflector.sh [-i|--ip <lhost:lport>] [-s|--shell <shell>] [-pl|--payload <1-12>] [-sp|--spawn] [-c|--copy] [--help]
 
 Options:
-  -l, --lhost    Local host
-  -p, --lport    Local port
+  -i, --ip       Local host and port (format: <lhost>:<lport>)
   -s, --shell    Shell to use e.g.(/bin/bash)
   -pl,--payload  PAYLOAD type (1-12)
                  1) Bash-i
@@ -34,7 +33,7 @@ Options:
                  12) PHP Pentest Monkey
   -sp, --spawn   Spawn a netcat listener on LPORT
   -c, --copy     Copy generated shell command to clipboard
-  -h, --help         Display this help message
+  -h, --help     Display this help message
 ```
 ### Additional Information
 

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba6ab8b-9379-4152-a01e-bf2cd90e0250" name="Changes" comment="Updated Reflector.sh to Version 1.2" />
+    <list default="true" id="6ba6ab8b-9379-4152-a01e-bf2cd90e0250" name="Changes" comment="Updated README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reflector.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Reflector.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710174937812</updated>
       <workItem from="1710174938886" duration="2091000" />
-      <workItem from="1710177697313" duration="7316000" />
+      <workItem from="1710177697313" duration="8254000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Reflector.sh to version 1.1">
       <option name="closed" value="true" />
@@ -123,7 +126,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710184984485</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated Reflector.sh to Version 1.2">
+      <option name="closed" value="true" />
+      <created>1710185107230</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710185107230</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated README.md">
+      <option name="closed" value="true" />
+      <created>1710185227808</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710185227808</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,9 +151,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated Reflector.sh to version 1.1" />
     <MESSAGE value="Updated Reflector.sh and README.md" />
-    <MESSAGE value="Updated README.md" />
     <MESSAGE value="Updated Reflector.sh to Version 1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Reflector.sh to Version 1.2" />
+    <MESSAGE value="Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Reflector$Reflector.coverage" NAME="Reflector Coverage Results" MODIFIED="1710176472546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

