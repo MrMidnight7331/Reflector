@@ -38,7 +38,7 @@ Options:
 ```
 ### Additional Information
 
-If using the copy command please install [xclip](https://github.com/astrand/xclip)
+If you want to use the copy function, please install [xclip](https://github.com/astrand/xclip)
 ```bash
 sudo apt install xclip
 ```
