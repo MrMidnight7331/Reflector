@@ -236,10 +236,10 @@ main() {
     esac
 
     if [ "$COPY" == true ]; then
-      echo "Your Shell: $PAYLOAD_command"
+      echo "Your Reflector-Shell: $PAYLOAD_command"
       echo "$PAYLOAD_command" | xclip -selection clipboard
     else
-      echo "Your Shell:"
+      echo "Your Reflector-Shell:"
       echo "$PAYLOAD_command"
     fi
 
