@@ -235,7 +235,7 @@ main() {
         *) echo "Invalid choice"; exit 1;;
     esac
 
-    if [ "$COPY" == true ] || command -v xclip 2>/dev/null; then
+    if [ "$COPY" == true ]; then
         echo "Your Reflector-Shell: $PAYLOAD_command"
         echo "$PAYLOAD_command" | xclip -selection clipboard
     else
