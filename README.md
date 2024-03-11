@@ -1,7 +1,7 @@
 # Reflector
 A quick reverse shell generator made for capture the flags
 
-![Example](Assets/Example-new.png)
+![Example](Assets/Example-New.png)
 
 ### Disclaimer:
 This tool is only for educational and academic purposes and should only be used with strict consent. Do not use it for illegal purposes! Developers assume no liability and are not responsible for any misuse or damage caused by this tool and software.
