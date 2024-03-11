@@ -1,5 +1,5 @@
 # Reflector
-A quick reverse shell generator made with "Shell Script"
+A quick reverse shell generator made for capture the flags
 
 ![Example](Assets/Example.png)
 
