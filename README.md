@@ -36,6 +36,13 @@ Options:
   -c, --copy     Copy generated shell command to clipboard
   -h, --help         Display this help message
 ```
+### Additional Information
+
+If using the copy command please install [xclip](https://github.com/astrand/xclip)
+```bash
+sudo apt install xclip
+```
+
 ---
 ### Socials
 
