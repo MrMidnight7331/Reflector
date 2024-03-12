@@ -6,6 +6,13 @@ A quick reverse shell generator made for capture the flags
 ### Disclaimer:
 This tool is only for educational and academic purposes and should only be used with strict consent. Do not use it for illegal purposes! Developers assume no liability and are not responsible for any misuse or damage caused by this tool and software.
 
+### Requirements:
+
+If you want to use the copy function, please install [xclip](https://github.com/astrand/xclip)
+```bash
+sudo apt install xclip
+```
+
 ### Installation:
 ```bash
 wget https://github.com/MrMidnight7331/Reflector/blob/main/Reflector.sh
@@ -35,13 +42,6 @@ Options:
   -c, --copy     Copy generated shell command to clipboard
   -h, --help     Display this help message
 ```
-### Additional Information
-
-If you want to use the copy function, please install [xclip](https://github.com/astrand/xclip)
-```bash
-sudo apt install xclip
-```
-
 ---
 ### Socials
 
